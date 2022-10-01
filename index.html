@@ -1,1 +1,422 @@
-hello
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>HiDEV &dash; Home page</title>
+  
+
+<style>
+  
+svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+body {
+  width: 100%;
+  background: #f6f8fa;
+  color: #000000d9;
+  font-family: Lexend, "Noto Sans SC", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  scrollbar-color: #8ab5ff #e6efff;
+  scrollbar-width: 8px;
+  overflow-x: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+}
+h1 {
+  margin: 15px 0;
+  font-weight: 700;
+  font-family: Lexend, "Noto Sans SC", sans-serif;
+  color: #1e3e3f;
+  font-size: 30px;
+}
+h3 {
+  margin: 15px 0;
+  font-weight: 700;
+  font-family: Lexend, "Noto Sans SC", sans-serif;
+  color: #1e3e3f;
+  font-size: 24px;
+}
+h5 {
+  margin: 15px 0;
+  font-weight: 700;
+  font-family: Lexend, "Noto Sans SC", sans-serif;
+  color: #1e3e3f;
+  font-size: 18px;
+}
+#home-head {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+#home-head {
+  width: 100%;
+  height: calc(100vh + 50px);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+#home-head .home-info {
+  position: relative;
+  margin: auto;
+}
+#home-head .home-info .info {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+  border-radius: 50%;
+}
+#home-head .home-info .loop:first-child {
+  border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+  background: #fff;
+  opacity: 0.3;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-animation: loop1 10s linear infinite;
+  -moz-animation: loop1 10s linear infinite;
+  -o-animation: loop1 10s linear infinite;
+  animation: loop1 10s linear infinite;
+}
+#home-head .home-info .loop:nth-child(2) {
+  border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+  background: #fff;
+  opacity: 0.45;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -webkit-animation: loop2 15s linear infinite;
+  -moz-animation: loop2 15s linear infinite;
+  -o-animation: loop2 15s linear infinite;
+  animation: loop2 15s linear infinite;
+}
+#home-head .home-info .loop:nth-child(3) {
+  border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+  opacity: 0.3;
+  background: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation: loop3 10s linear infinite;
+  -moz-animation: loop3 10s linear infinite;
+  -o-animation: loop3 10s linear infinite;
+  animation: loop3 10s linear infinite;
+}
+#home-head .home-info .loop:nth-child(4) {
+  border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+  opacity: 0.45;
+  background: #fff;
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+  -webkit-animation: loop4 15s linear infinite;
+  -moz-animation: loop4 15s linear infinite;
+  -o-animation: loop4 15s linear infinite;
+  animation: loop4 15s linear infinite;
+}
+#home-background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e6efff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8ab5ff;
+  border-radius: 100px;
+  border: 3px solid #e6efff;
+}
+::selection {
+  background-color: #edf7ff;
+  color: #9dd1ff;
+}
+::-moz-selection {
+  background-color: #edf7ff;
+  color: #9dd1ff;
+}
+@media (min-width: 900px) {
+  #home-head .home-info {
+    width: 500px;
+    height: 500px;
+  }
+  #home-head .home-info .loop {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+  }
+  #home-head .home-info .info {
+    width: 500px;
+    height: 500px;
+  }
+  #home-head .home-info .info .wrap {
+    padding: 25px;
+  }
+  #home-head .home-info .info .wrap h1 {
+    font-size: 52px;
+    font-weight: 700;
+    font-family: Lexend, "Noto Sans SC", sans-serif;
+    margin-bottom: 10px;
+  }
+  #home-head .home-info .info .wrap h3 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  #home-head .home-info .info .wrap h5 {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 900px) {
+  #home-head .home-info {
+    width: 350px;
+    height: 350px;
+  }
+  #home-head .home-info .loop {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    display: none;
+  }
+  #home-head .home-info .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.651);
+  }
+  #home-head .home-info .info .wrap {
+    padding: 50px;
+  }
+  #home-head .home-info .info .wrap h1 {
+    font-size: 46px;
+    font-weight: 700;
+    font-family: Lexend, "Noto Sans SC", sans-serif;
+    margin-bottom: 10px;
+  }
+  #home-head .home-info .info .wrap h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  #home-head .home-info .info .wrap h5 {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+}
+
+@-moz-keyframes loop1 {
+  0% {
+    -moz-transform: rotate(30deg);
+  }
+  100% {
+    -moz-transform: rotate(390deg);
+  }
+}
+@-webkit-keyframes loop1 {
+  0% {
+    -webkit-transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(390deg);
+  }
+}
+@-o-keyframes loop1 {
+  0% {
+    -o-transform: rotate(30deg);
+  }
+  100% {
+    -o-transform: rotate(390deg);
+  }
+}
+@keyframes loop1 {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(390deg);
+  }
+}
+@-moz-keyframes loop2 {
+  0% {
+    -moz-transform: rotate(60deg);
+  }
+  100% {
+    -moz-transform: rotate(420deg);
+  }
+}
+@-webkit-keyframes loop2 {
+  0% {
+    -webkit-transform: rotate(60deg);
+  }
+  100% {
+    -webkit-transform: rotate(420deg);
+  }
+}
+@-o-keyframes loop2 {
+  0% {
+    -o-transform: rotate(60deg);
+  }
+  100% {
+    -o-transform: rotate(420deg);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(420deg);
+  }
+}
+@-moz-keyframes loop3 {
+  0% {
+    -moz-transform: rotate(90deg);
+  }
+  100% {
+    -moz-transform: rotate(450deg);
+  }
+}
+@-webkit-keyframes loop3 {
+  0% {
+    -webkit-transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(450deg);
+  }
+}
+@-o-keyframes loop3 {
+  0% {
+    -o-transform: rotate(90deg);
+  }
+  100% {
+    -o-transform: rotate(450deg);
+  }
+}
+@keyframes loop3 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+@-moz-keyframes loop4 {
+  0% {
+    -moz-transform: rotate(120deg);
+  }
+  100% {
+    -moz-transform: rotate(480deg);
+  }
+}
+@-webkit-keyframes loop4 {
+  0% {
+    -webkit-transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(480deg);
+  }
+}
+@-o-keyframes loop4 {
+  0% {
+    -o-transform: rotate(120deg);
+  }
+  100% {
+    -o-transform: rotate(480deg);
+  }
+}
+@keyframes loop4 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+
+</style>
+  
+  </head>
+
+<body translate="no" >
+  <body>
+  <div id="layout" data-v-app="">
+    <div style="" class="">
+      <div id="main">
+        <div id="home-head">
+          <div id="home-background" style="background-image: url(https://files.catbox.moe/zieedu.png);"></div>
+          <div id="home-info" class="home-info"><span class="loop"></span> <span class="loop"></span> <span class="loop"></span> <span class="loop"></span> <span class="info">
+              <div class="wrap">
+                <h1>Михаил</h1>
+                <h3>Web разработчик</h3>
+                <h5><a href="mailto:pcmyonelove@gmail.com" title="pcmyonelove@gmail.com">pcmyonelove@gmail.com</a></h5>
+              </div>
+            </span></div>
+        </div>
+        
+        
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+  
+  
+  
+  
+
+</body>
+
+</html>
